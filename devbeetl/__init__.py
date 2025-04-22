@@ -50,12 +50,12 @@ class Devbeetl():
         """
         Returns a secret from Infisical
         """
-        if project is None:
-            project = Devbeetl.project_id
-            
         if Devbeetl.client is None:	
             Devbeetl.check_configured()
         
+        if project is None:
+            project = Devbeetl.project_id
+
         secret = Devbeetl.client.getSecret(
             GetSecretOptions.from_dict(
                 {
