@@ -1,8 +1,8 @@
 {
 	"name": "Python 3",
-	"image": "ghcr.io/hoglandets-it/devcontainer-python-mssql:3.12-bookworm",
+	"image": "ghcr.io/hoglandets-it/devcontainer-beetl:3.12-bookworm",
 	"features": {},
-    "postCreateCommand": "pip3 install -r requirements.txt",
+    "postCreateCommand": "echo 'Successfully created the devcontainer!'",
 	"customizations": {
 		"vscode": {
 			"extensions": [
