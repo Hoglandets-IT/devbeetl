@@ -2,14 +2,14 @@ import os
 from infisical_client import InfisicalClient, ClientSettings, AuthenticationOptions, UniversalAuthMethod, GetSecretOptions
 from dotenv import load_dotenv
 
-class Devbeetl():
-    client: InfisicalClient
+class Devbeetl:
+    client: InfisicalClient = None
     
-    addr: str
-    client_id: str
-    client_secret: str
-    project_id: str
-    environment: str
+    addr: str = None
+    client_id: str = None
+    client_secret: str = None
+    project_id: str = None
+    environment: str = None
     
     @staticmethod
     def env(name: str, default: str = None):
@@ -55,6 +55,9 @@ class Devbeetl():
         
         if project is None:
             project = Devbeetl.project_id
+        
+        if environment is None:
+            environment = Devbeetl.environment
 
         secret = Devbeetl.client.getSecret(
             GetSecretOptions.from_dict(
