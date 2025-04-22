@@ -1,4 +1,4 @@
-from devbeetl.devbeetl import Devbeetl
+from devbeetl import Devbeetl
 from beetl.beetl import Beetl, BeetlConfig
 
 
